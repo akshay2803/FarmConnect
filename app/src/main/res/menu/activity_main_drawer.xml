@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_marketrates"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Market Today" />
+
+        <item
+            android:id="@+id/nav_cropsale"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Crop Sale" />
+    </group>
+
+    <item android:title="Soil Checkup">
+        <menu>
+            <item
+                android:id="@+id/soilappointment"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Soil Appointment" />
+            <item
+                android:id="@+id/soilreport"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Soil Report" />
+        </menu>
+    </item>
+
+
+    <item android:title="Communicate with us">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send your query" />
+        </menu>
+    </item>
+
+</menu>
