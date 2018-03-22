@@ -20,7 +20,7 @@
             android:gravity="center"
             android:paddingTop="8dp"
             android:text="Akshay Yadav"
-            android:textColorLink="@android:color/black"
+            android:textColorLink="@android:color/background_dark"
             android:textSize="28dp"
             android:textStyle="bold" />
 
