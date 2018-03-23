@@ -12,7 +12,6 @@ import android.widget.Button;
 
 public class HomeFragment extends Fragment {
 
-
     public HomeFragment() {
     }
 
