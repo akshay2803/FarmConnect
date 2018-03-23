@@ -1,5 +1,6 @@
 package com.example.akshay.farmconnect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,8 +68,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id==R.id.action_location)
+        {
+             Intent location=new Intent(MainActivity.this, location.class);
+             startActivity(location);
+            return true;
+        }
 
-        return super.onOptionsItemSelected(item);
+
+        return true;
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
