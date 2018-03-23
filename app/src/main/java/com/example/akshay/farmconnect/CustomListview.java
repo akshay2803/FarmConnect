@@ -14,16 +14,14 @@ import android.widget.TextView;
 
 
 public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHolder> {
-    private String[] cropArray;
-    private String[] desc;
-    private Integer[] imgid;
+    private String[] array;
+    private Integer[] image;
     private Activity context;
 
 
-    public CustomListview(String[] cropArray, String[] desc, Integer[] imgid){
-        this.cropArray=cropArray;
-        this.imgid=imgid;
-        this.desc=desc;
+    public CustomListview(String[] array, Integer[] image){
+        this.array=array;
+        this.image=image;
     }
 
     @Override
@@ -36,34 +34,23 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.tv2.setText(cropArray[position]);
-        holder.img1.setImageResource(imgid[position]);
-        holder.tv3.setText(desc[position]);
+        holder.tv2.setText(array[position]);
+        holder.img1.setImageResource(image[position]);
     }
 
     @Override
     public int getItemCount() {
-        return desc.length;
+        return array.length;
     }
-
-    
-  /*  public CustomListview(CropSaleFragment context, String[]cropArray, String[]desc, Integer[] imgid ) {
-         this.context=context;
-        this.desc=desc;
-        this.imgid=imgid;
-
-    }*/
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         ImageView img1;
         TextView tv2;
-        TextView tv3;
         public ViewHolder(View v) {
             super(v);
             img1=(ImageView) v.findViewById(R.id.imageView);
             tv2=(TextView)  v.findViewById(R.id.textView1);
-            tv3=(TextView)  v.findViewById(R.id.textView2);
         }
     }
 }

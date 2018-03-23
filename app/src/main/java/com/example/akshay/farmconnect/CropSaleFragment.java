@@ -22,7 +22,7 @@ public class CropSaleFragment extends Fragment {
 
 
     String[]cropArray = {"Rice","Wheat","Barley","Maize",
-            "Oats",};
+            "Oats"};
     String[]desc={"50kg","40kg","30kg","60kg","90kg"};
     Integer[]imgid={R.drawable.rice,R.drawable.wheat,R.drawable.barley,R.drawable.maize,R.drawable.oats};
     public CropSaleFragment() {
