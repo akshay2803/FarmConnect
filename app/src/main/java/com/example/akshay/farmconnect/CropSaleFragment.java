@@ -31,8 +31,8 @@ public class CropSaleFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_crop_sale, container, false);
         lv=(ListView) v.findViewById(R.id.listCrop);
-        CustomListview customListview=new CustomListview(this,cropArray,desc,imgid);
-
+        //CustomListview customListview=new CustomListview(this,cropArray,desc,imgid);
+        return v;
     }
 
 
