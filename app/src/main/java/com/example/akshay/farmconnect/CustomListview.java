@@ -12,9 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by abhay on 3/22/2018.
- */
 
 public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHolder> {
     private String[] cropArray;
@@ -46,7 +43,7 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return desc.length;
     }
 
     
@@ -66,8 +63,7 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
             super(v);
             img1=(ImageView) v.findViewById(R.id.imageView);
             tv2=(TextView)  v.findViewById(R.id.textView1);
-            tv2=(TextView)  v.findViewById(R.id.textView2);
-
+            tv3=(TextView)  v.findViewById(R.id.textView2);
         }
     }
 }

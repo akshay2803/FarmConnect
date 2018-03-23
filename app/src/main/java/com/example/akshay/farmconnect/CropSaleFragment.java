@@ -3,6 +3,8 @@ package com.example.akshay.farmconnect;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,9 @@ import android.widget.ListView;
  * A simple {@link Fragment} subclass.
  */
 public class CropSaleFragment extends Fragment {
-    ListView lv;
+    RecyclerView lv;
+    RecyclerView.LayoutManager mLayoutManager;
+
 
     String[]cropArray = {"Rice","Wheat","Barley","Maize",
             "Oats"};
@@ -30,11 +34,12 @@ public class CropSaleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_crop_sale, container, false);
-        lv=(ListView) v.findViewById(R.id.listCrop);
-        //CustomListview customListview=new CustomListview(this,cropArray,desc,imgid);
+        lv= v.findViewById(R.id.listCrop);
+        CustomListview customListview=new CustomListview(cropArray,desc,imgid);
+        mLayoutManager = new LinearLayoutManager(getContext());
+        lv.setLayoutManager(mLayoutManager);
+        lv.setAdapter(customListview);
         return v;
     }
-
-
 
 }
