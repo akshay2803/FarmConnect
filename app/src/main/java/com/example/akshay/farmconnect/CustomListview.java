@@ -43,14 +43,24 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
         return array.length;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
+
         ImageView img1;
         TextView tv2;
         public ViewHolder(View v) {
             super(v);
+            v.setOnClickListener(this);
             img1=(ImageView) v.findViewById(R.id.imageView);
             tv2=(TextView)  v.findViewById(R.id.textView1);
+        }
+
+        @Override
+        public void onClick(View view) {
+
+
+
         }
     }
 }

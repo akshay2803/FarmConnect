@@ -41,5 +41,5 @@ public class CropSaleFragment extends Fragment {
         lv.setAdapter(customListview);
         return v;
     }
-
 }
+
