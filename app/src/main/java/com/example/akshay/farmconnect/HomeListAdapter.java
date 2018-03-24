@@ -1,26 +1,25 @@
 package com.example.akshay.farmconnect;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Created by akshay on 23-03-2018.
+ */
 
-public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHolder> {
+public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHolder> {
     private String[] array;
     private Integer[] image;
     private Activity context;
 
 
-    public CustomListview(Activity context,String[] array, Integer[] image){
+    public HomeListAdapter(Activity context,String[] array, Integer[] image){
         this.array=array;
         this.context=context;
         this.image=image;
@@ -29,7 +28,7 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = (View) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.listview_layout, parent, false);
+                .inflate(R.layout.layout_item_home, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -41,7 +40,7 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
         holder.v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context,DetailsActivity.class);
+                Intent intent=new Intent(context,HomeDetail.class);
                 intent.putExtra("array",array[position]);
                 intent.putExtra("img",image[position]);
                 intent.putExtra("position",position);
@@ -78,3 +77,4 @@ public class CustomListview extends RecyclerView.Adapter<CustomListview.ViewHold
         }
     }
 }
+

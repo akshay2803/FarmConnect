@@ -35,7 +35,7 @@ public class CropSaleFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_crop_sale, container, false);
         lv= v.findViewById(R.id.listCrop);
-        CustomListview customListview=new CustomListview(cropArray ,imgid);
+        CustomListview customListview=new CustomListview(getActivity(),cropArray ,imgid);
         mLayoutManager = new LinearLayoutManager(getContext());
         lv.setLayoutManager(mLayoutManager);
         lv.setAdapter(customListview);
