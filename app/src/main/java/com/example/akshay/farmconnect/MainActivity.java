@@ -2,11 +2,7 @@ package com.example.akshay.farmconnect;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -70,7 +66,7 @@ public class MainActivity extends AppCompatActivity
         }
         if (id==R.id.action_location)
         {
-             Intent location=new Intent(MainActivity.this, location.class);
+             Intent location=new Intent(MainActivity.this, Location.class);
              startActivity(location);
             return true;
         }
