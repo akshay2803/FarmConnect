@@ -10,8 +10,8 @@ public class DetailsActivity extends AppCompatActivity {
     String name;
     String[] price1={"150","100"};
     String[] price2;
-    Integer[] imgid={R.drawable.rice,R.drawable.wheat,R.drawable.barley,R.drawable.maize,R.drawable.oats,R.drawable.millets,R.drawable.pulses};
-    int position;
+   // Integer[] imgid={R.drawable.rice,R.drawable.wheat,R.drawable.barley,R.drawable.maize,R.drawable.oats,R.drawable.millets,R.drawable.pulses};
+    int position,img;
     ImageView imgView;
 
     @Override
@@ -23,9 +23,10 @@ public class DetailsActivity extends AppCompatActivity {
             Bundle bundle=getIntent().getExtras();
             name=(String) bundle.get("array");
             position=(int) bundle.get("position");
+            img=(int) bundle.get("img");
         }
         imgView=findViewById(R.id.imgView);
-        imgView.setImageResource(imgid[position]);
+        imgView.setImageResource(img);
 
     }
 }
