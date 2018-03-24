@@ -22,11 +22,12 @@ public class CropSaleFragment extends Fragment {
 
 
     String[]cropArray = {"Rice","Wheat","Barley","Maize",
-            "Oats"};
-    String[]desc={"50kg","40kg","30kg","60kg","90kg"};
-    Integer[]imgid={R.drawable.rice,R.drawable.wheat,R.drawable.barley,R.drawable.maize,R.drawable.oats};
-    public CropSaleFragment() {
 
+            "Oats","Millets","Pulses","Cotton","Sugarcane","Jute"};
+    Integer[]imgid={R.drawable.rice,R.drawable.wheat,R.drawable.barley,R.drawable.maize,R.drawable.oats,R.drawable.millets,R.drawable.pulses
+    ,R.drawable.cotton,R.drawable.sugarcane,R.drawable.jute};
+
+    public CropSaleFragment() {
     }
 
 
@@ -35,7 +36,7 @@ public class CropSaleFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_crop_sale, container, false);
         lv= v.findViewById(R.id.listCrop);
-        CustomListview customListview=new CustomListview(cropArray,desc,imgid);
+        CustomListview customListview=new CustomListview(cropArray ,imgid);
         mLayoutManager = new LinearLayoutManager(getContext());
         lv.setLayoutManager(mLayoutManager);
         lv.setAdapter(customListview);

@@ -1,6 +1,7 @@
 package com.example.akshay.farmconnect;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -32,7 +33,7 @@ public class MarketTodayFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_market_today, container, false);
         lv= v.findViewById(R.id.listCrop1);
-        CustomListview customListview=new CustomListview(marketArray , imgid1);
+        CustomListview customListview=new CustomListview(getActivity(),marketArray , imgid1);
         mLayoutManager = new LinearLayoutManager(getContext());
         lv.setLayoutManager(mLayoutManager);
         lv.setAdapter(customListview);
